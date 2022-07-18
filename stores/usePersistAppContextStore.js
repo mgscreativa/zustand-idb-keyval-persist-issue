@@ -30,11 +30,11 @@ export const usePersistAppContextStore = create(
     {
       name: 'app-storage',
       getStorage: () => zustandStorage,
-      onRehydrateStorage: () => () => {
-        // state.setHasHydrated(true)
-        console.log('hasHydrated:', usePersistAppContextStore.persist.hasHydrated());
-        usePersistAppContextStore.setState({ hasHydrated: true });
-      }
+      // onRehydrateStorage: () => () => {
+      //   // state.setHasHydrated(true)
+      //   console.log('hasHydrated:', usePersistAppContextStore.persist.hasHydrated());
+      //   usePersistAppContextStore.setState({ hasHydrated: usePersistAppContextStore.persist.hasHydrated() });
+      // }
     },
   ),
 );
@@ -55,7 +55,7 @@ export const useHydration = () => {
       unsubHydrate();
       unsubFinishHydration();
     };
-  }, []);
+  }, [hydrated]);
 
   console.log('hydrated:', hydrated)
 
