@@ -21,19 +21,19 @@ export default function App() {
   );
   const hasHydratedFromHook = useHydration();
 
-  if (!hasHydratedFromHook || !hasHydrated) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>
-          {`
-            hasHydratedFromHook: ${hasHydratedFromHook}
-            hasHydrated: ${hasHydrated}
-            fishes: ${fishes}
-          `}
-        </Text>
-      </View>
-    );
-  }
+  // if (!hasHydratedFromHook || !hasHydrated) {
+  //   return (
+  //     <View style={styles.container}>
+  //       <Text style={styles.paragraph}>
+  //         {`
+  //           hasHydratedFromHook: ${hasHydratedFromHook}
+  //           hasHydrated: ${hasHydrated}
+  //           fishes: ${fishes}
+  //         `}
+  //       </Text>
+  //     </View>
+  //   );
+  // }
 
   return (
     <View style={styles.container}>
@@ -53,7 +53,7 @@ export default function App() {
       </TouchableOpacity>
 
       <TouchableOpacity
-        key="bt1"
+        key="bt2"
         onPress={() => clearFish()}
         style={styles.button}>
         <Text>Clear Fish</Text>
